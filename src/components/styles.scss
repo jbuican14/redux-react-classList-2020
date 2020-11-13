@@ -1,0 +1,119 @@
+//SET UP
+
+/* 10/16 = 0.625 * 100 = 62.5% */
+$DEFAULT_FONTSIZE: 62.5%;
+
+/* FONTS */
+$PRIMARY_FONT: 'Montserrat', sans-serif;
+$SECONDARY_FONT: 'Quicksand', sans-serif;
+
+/* COLORS */
+$LIGHT_GREY: #eee;
+$GREY: #777;
+$DARK_GREY: #222;
+$BLUE: #274b5e;
+
+/*Font Color*/
+$REGULAR: #555;
+
+/*SIZE*/
+$SMALL: 1.6rem;
+$MEDIUM: 2rem;
+$LARGE: 5rem;
+
+html {
+  font-size: $DEFAULT_FONTSIZE;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $PRIMARY_FONT;
+}
+
+h1 {
+  font-size: $LARGE;
+  margin: 0 0 1.5rem 0;
+}
+
+/* section classes */
+.classes {
+  margin-left: 3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem 0 0;
+  box-sizing: border-box;
+  min-width: 375px;
+
+  &-cards-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 40%;
+    height: 85vh;
+  }
+}
+
+.class {
+  &-card {
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    box-shadow: 0 0.5rem 1rem rgb(119, 119, 119);
+
+    & > * {
+      width: 100%;
+      font-size: 4.5rem;
+      text-align: center;
+    }
+
+    &-content {
+      padding: 0.5rem;
+      color: $DARK_GREY;
+    }
+    &-heading {
+      font-size: 2rem;
+      font-weight: 300;
+      margin: 0;
+    }
+    &-link {
+      text-align: right;
+      font-size: 1rem;
+    }
+    &-button {
+      width: 15rem;
+      padding: 0.8rem;
+      font-size: 1.2rem;
+      border: 0.1rem solid $LIGHT_GREY;
+      outline: none;
+      cursor: pointer;
+      text-transform: uppercase;
+
+      & .btn-arrow {
+        transition: margin-left 0.5s;
+      }
+
+      &:hover .btn-arrow {
+        margin-left: 0.8rem;
+      }
+
+      &:active {
+        transform: translateY(0.2rem);
+      }
+    }
+  }
+}
+
+.class {
+  &-detail-content {
+    width: 55%;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+/* end of classes */
